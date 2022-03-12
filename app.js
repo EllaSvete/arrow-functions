@@ -125,8 +125,13 @@ console.log(sum(1, 2, 3, 4));
 //   };
 // };
 
-const objectLit = (key1, key2, key3) => `${key1} value1 ${key2}  value2 ${key3} value3`;
-
+const objectLit = (key1, key2, key3) => {
+  return {
+    key1: 'value1',
+    key2: 'value2',
+    key3: 'value3',
+  };
+};
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
@@ -138,7 +143,11 @@ console.log(objectLit());
 //   return [sum, product];
 // };
 
-const sumAndProduct = (a, b) => a + b && a * b;
+const sumAndProduct = (a, b) => {
+  let sum = a + b;
+  let product = a * b;
+  return [sum, product]
+}
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sumAndProduct(3, 9));
@@ -154,7 +163,7 @@ const message = name => `Hello, ${name}!`;
 console.log(message('Allie'));
 
 
-let Student = function(name, age, hometown) {
+let Student = function(name, age, hometown){
   this.name = name;
   this.age = age;
   this.hometown = hometown;
@@ -177,7 +186,7 @@ Student.prototype.greeting = function() {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -188,7 +197,7 @@ Student.courseName = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
