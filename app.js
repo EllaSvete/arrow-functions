@@ -217,8 +217,13 @@ console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+
+// "this" refers to the object that is created when the constructor is instantiated
+
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+
+//the value of this is not reset in the arrow function, so it is the same as the this in the non-arrow function.
+
 // 3. Explain why "this" is different when an arrow function is used.
-//
+
+//"this" is different when an arrow function is used because arrow functions retain the "this" value of the functional scope. If there is a non arrow function scope, the this context will be the global window object.
